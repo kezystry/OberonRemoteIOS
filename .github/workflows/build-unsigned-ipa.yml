@@ -1,0 +1,59 @@
+name: Build unsigned iOS IPA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Oberon packet protocol
+        working-directory: iOS
+        run: ./Scripts/test-protocol.sh
+
+      - name: Select Xcode and verify shared scheme
+        working-directory: iOS
+        run: |
+          xcodebuild -version
+          xcodebuild -list -project OberonRemoteIOS.xcodeproj
+
+      - name: Build iOS app (unsigned)
+        working-directory: iOS
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -project OberonRemoteIOS.xcodeproj \
+            -scheme OberonRemoteIOS \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY='' \
+            build | tee build.log
+
+      - name: Package unsigned IPA
+        working-directory: iOS
+        run: |
+          set -euo pipefail
+          APP_PATH="build/Build/Products/Release-iphoneos/OberonRemoteIOS.app"
+          test -d "$APP_PATH" || { echo "Expected app bundle not found: $APP_PATH"; find build/Build/Products -maxdepth 4 -print; exit 1; }
+          rm -rf Payload OberonRemoteIOS-unsigned.ipa
+          mkdir -p Payload
+          ditto "$APP_PATH" "Payload/OberonRemoteIOS.app"
+          /usr/bin/zip -qry OberonRemoteIOS-unsigned.ipa Payload
+          unzip -l OberonRemoteIOS-unsigned.ipa | head -40
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OberonRemoteIOS-unsigned-ipa
+          path: iOS/OberonRemoteIOS-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 14
