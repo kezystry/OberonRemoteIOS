@@ -1,0 +1,26 @@
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xccheckout
+xcuserdata/
+*.moved-aside
+*.hmap
+
+# Swift Package Manager
+.build/
+Packages/
+Package.resolved
+
+# macOS
+.DS_Store
+
+# Signing and provisioning
+*.mobileprovision
+*.p12
+*.cer
+
+# Generated IPA and app bundles
+*.ipa
+*.app/
