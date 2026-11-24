@@ -15,7 +15,7 @@ jobs:
 
       - name: Check Oberon packet protocol
         working-directory: iOS
-        run: ./Scripts/test-protocol.sh
+        run: bash ./Scripts/test-protocol.sh
 
       - name: Select Xcode and verify shared scheme
         working-directory: iOS
