@@ -1,0 +1,142 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* OberonRemoteIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* OberonRemoteIOSApp.swift */; };
+		A10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* ContentView.swift */; };
+		A10000000000000000000003 /* OberonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* OberonProtocol.swift */; };
+		A10000000000000000000004 /* GamepadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* GamepadManager.swift */; };
+		A10000000000000000000005 /* OberonServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* OberonServer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B10000000000000000000001 /* OberonRemoteIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OberonRemoteIOSApp.swift; sourceTree = "<group>"; };
+		B10000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B10000000000000000000003 /* OberonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OberonProtocol.swift; sourceTree = "<group>"; };
+		B10000000000000000000004 /* GamepadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamepadManager.swift; sourceTree = "<group>"; };
+		B10000000000000000000005 /* OberonServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OberonServer.swift; sourceTree = "<group>"; };
+		B10000000000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10000000000000000000007 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B10000000000000000000010 /* NOTICE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NOTICE.md; sourceTree = "<group>"; };
+		B10000000000000000000008 /* build-unsigned-ipa.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = build-unsigned-ipa.yml; sourceTree = "<group>"; };
+		B10000000000000000000009 /* OberonRemoteIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OberonRemoteIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C10000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D10000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				D10000000000000000000002 /* App */,
+				D10000000000000000000003 /* Products */,
+				D10000000000000000000004 /* .github */,
+				B10000000000000000000007 /* README.md */,
+				B10000000000000000000010 /* NOTICE.md */,
+			);
+			sourceTree = "<group>";
+		};
+		D10000000000000000000002 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000001 /* OberonRemoteIOSApp.swift */,
+				B10000000000000000000002 /* ContentView.swift */,
+				B10000000000000000000003 /* OberonProtocol.swift */,
+				B10000000000000000000004 /* GamepadManager.swift */,
+				B10000000000000000000005 /* OberonServer.swift */,
+				B10000000000000000000006 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000003 /* Products */ = {isa = PBXGroup; children = (B10000000000000000000009 /* OberonRemoteIOS.app */,); name = Products; sourceTree = "<group>"; };
+		D10000000000000000000004 /* .github */ = {isa = PBXGroup; children = (D10000000000000000000005 /* workflows */,); path = .github; sourceTree = "<group>"; };
+		D10000000000000000000005 /* workflows */ = {isa = PBXGroup; children = (B10000000000000000000008 /* build-unsigned-ipa.yml */,); path = workflows; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E10000000000000000000001 /* OberonRemoteIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F10000000000000000000002 /* Build configuration list for PBXNativeTarget */;
+			buildPhases = (C10000000000000000000002 /* Sources */, C10000000000000000000001 /* Frameworks */, C10000000000000000000003 /* Resources */,);
+			buildRules = ();
+			dependencies = ();
+			name = OberonRemoteIOS;
+			productName = OberonRemoteIOS;
+			productReference = B10000000000000000000009 /* OberonRemoteIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C10000000000000000000002 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* OberonRemoteIOSApp.swift in Sources */, A10000000000000000000002 /* ContentView.swift in Sources */, A10000000000000000000003 /* OberonProtocol.swift in Sources */, A10000000000000000000004 /* GamepadManager.swift in Sources */, A10000000000000000000005 /* OberonServer.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C10000000000000000000003 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXProject section */
+		E10000000000000000000002 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 1600; TargetAttributes = {E10000000000000000000001 = {CreatedOnToolsVersion = 16.0; }; }; };
+			buildConfigurationList = F10000000000000000000001 /* Build configuration list for PBXProject */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base,);
+			mainGroup = D10000000000000000000001;
+			productRefGroup = D10000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (E10000000000000000000001 /* OberonRemoteIOS */,);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		F10000000000000000000011 /* Debug Project */ = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; SWIFT_VERSION = 5.0; }; name = Debug; };
+		F10000000000000000000012 /* Release Project */ = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; SWIFT_VERSION = 5.0; }; name = Release; };
+		F10000000000000000000021 /* Debug Target */ = {isa = XCBuildConfiguration; buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks",);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oberonremote.iosinput;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			}; name = Debug; };
+		F10000000000000000000022 /* Release Target */ = {isa = XCBuildConfiguration; buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks",);
+				PRODUCT_BUNDLE_IDENTIFIER = com.oberonremote.iosinput;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			}; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F10000000000000000000001 /* Build configuration list for PBXProject */ = {isa = XCConfigurationList; buildConfigurations = (F10000000000000000000011 /* Debug Project */, F10000000000000000000012 /* Release Project */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		F10000000000000000000002 /* Build configuration list for PBXNativeTarget */ = {isa = XCConfigurationList; buildConfigurations = (F10000000000000000000021 /* Debug Target */, F10000000000000000000022 /* Release Target */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+
+	};
+	rootObject = E10000000000000000000002 /* Project object */;
+}
